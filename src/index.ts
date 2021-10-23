@@ -1,8 +1,8 @@
 import { ClientOptions } from "discord.js";
-import { Bot } from "./structures/Client";
+import Client from "./structures/Client";
 import { config as configure } from "dotenv";
 
-configure()
+configure();
 
 const baseOptions: ClientOptions = {
     allowedMentions: {
@@ -12,6 +12,6 @@ const baseOptions: ClientOptions = {
     intents: 14335,
 };
 
-const client: Bot = new Bot(baseOptions);
+const client: Client = new Client(baseOptions);
 
-client.login(process.env.BOT_TOKEN);
+client.startSystem();
