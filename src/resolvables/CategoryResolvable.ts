@@ -1,1 +1,1 @@
-export const Categories = ["utility"];
+export const Categories = ["common", "utility"];
