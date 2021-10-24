@@ -8,7 +8,7 @@ export default class Ready extends BaseEvent {
         })
     }
     public async run(client: Client) {
-
+        client.console(false, `${client.user.tag} has logged into ${client.guilds.cache.size} servers.`, "Websocket");
     }
 }
 
